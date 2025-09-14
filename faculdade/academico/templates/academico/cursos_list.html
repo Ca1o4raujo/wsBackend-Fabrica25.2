@@ -8,10 +8,10 @@
 <ul>
   {% for curso in cursos %}
     <li>
-      {{ curso.nome }} - {{ curso.descricao }}
+      {{ curso.nome }} - {{ curso.descricao }} <br>
       [<a href="{% url 'curso_update' curso.id %}">Editar</a>]
       [<a href="{% url 'curso_delete' curso.id %}">Deletar</a>]
-    </li>
+    </li><hr>
   {% empty %}
     <li>Nenhum curso cadastrado.</li>
   {% endfor %}
