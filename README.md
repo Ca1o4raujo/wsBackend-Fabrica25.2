@@ -100,9 +100,13 @@ Django REST framework:
 
 academico/  
 ├── models.py       # Modelos: Curso, Aluno
+
 ├── views.py        # Views CRUD + integração API externa
+
 ├── urls.py         # Rotas do sistema
+
 ├── templates/
+
 │   └── academico/  # HTML dos CRUDs
 requirements.txt
 README.md
