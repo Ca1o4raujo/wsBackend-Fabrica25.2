@@ -12,7 +12,7 @@ Projeto em **Django** que implementa um sistema acadêmico simples com:
 
 - **Cursos**
   - Criar, listar, editar e deletar cursos.
-  - Importar universidades da API externa como cursos do sistema.
+  - Importar universidades da API externa.
 
 - **Alunos**
   - Criar, listar, editar e deletar alunos.
@@ -20,7 +20,6 @@ Projeto em **Django** que implementa um sistema acadêmico simples com:
 
 - **API Externa**
   - Buscar universidades por país.
-  - Importar diretamente como cursos do sistema.
 
 ---
 
@@ -29,13 +28,16 @@ Projeto em **Django** que implementa um sistema acadêmico simples com:
 1. Clone o repositório:
 
 git clone https://github.com/Ca1o4raujo/wsBackend-Fabrica25.2.git
+
 cd faculdade
 
 
 Crie e ative um ambiente virtual:
 
 python -m venv venv
+
 source venv/bin/activate   # Linux/Mac
+
 venv\Scripts\activate      # Windows
 
 
@@ -60,6 +62,7 @@ python manage.py runserver
 
 
 # 🌐 Endpoints principais
+
 Cursos:
 
 /cursos/ → Listar cursos
@@ -72,7 +75,9 @@ Cursos:
 
 /cursos/<id>/deletar/ → Deletar curso
 
+
 Alunos:
+
 
 /alunos/ → Listar alunos
 
@@ -88,7 +93,9 @@ Universidades (API Externa)
 
 /universidades → Buscar universidades por país
 
+
 Django REST framework:
+
 
 /api
 
