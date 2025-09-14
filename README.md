@@ -69,11 +69,9 @@ Cursos:
 
 /cursos/novo/ → Criar curso
 
-/cursos/<id>/ → Detalhar curso
+/cursos/<id>id/editar/ → Editar curso
 
-/cursos/<id>/editar/ → Editar curso
-
-/cursos/<id>/deletar/ → Deletar curso
+/cursos/<id>id/deletar/ → Deletar curso
 
 
 Alunos:
@@ -83,11 +81,9 @@ Alunos:
 
 /alunos/novo/ → Criar aluno
 
-/alunos/<id>/ → Detalhar aluno
+/alunos/<id>id/editar/ → Editar aluno
 
-/alunos/<id>/editar/ → Editar aluno
-
-/alunos/<id>/deletar/ → Deletar aluno
+/alunos/<id>id/deletar/ → Deletar aluno
 
 Universidades (API Externa)
 
