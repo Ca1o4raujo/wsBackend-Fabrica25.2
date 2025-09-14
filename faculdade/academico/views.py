@@ -1,6 +1,9 @@
+import requests
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Aluno, Curso
 from rest_framework import viewsets
+from rest_framework.views import APIView
+from rest_framework.response import Response
 from .serializers import AlunoSerializer, CursoSerializer
 from .forms import AlunoForm, CursoForm
 
@@ -55,6 +58,19 @@ def aluno_delete(request, pk):
         aluno.delete()
         return redirect("alunos_list")
     return render(request, "academico/aluno_confirm_delete.html", {"aluno": aluno})
+
+class UniversidadesAPI(APIView):
+    def get(self, request):
+        url = "http://universities.hipolabs.com/search?country=Brazil"
+        r = requests.get(url)
+        data = r.json()
+        return Response(data)
+
+def universidades_list(request):
+    url = "http://universities.hipolabs.com/search?country=Brazil"
+    r = requests.get(url)
+    universidades = r.json()
+    return render(request, "academico/universidades_list.html", {"universidades": universidades})
 
 class CursoViewSet(viewsets.ModelViewSet):
     queryset = Curso.objects.all()

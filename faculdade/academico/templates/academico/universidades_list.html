@@ -1,0 +1,16 @@
+{% extends "academico/base.html" %}
+
+{% block title %}Universidades do Brasil{% endblock %}
+
+{% block content %}
+<h2>Universidades (API Externa)</h2>
+<ul>
+  {% for uni in universidades %}
+    <li>
+      {{ uni.name }} - <a href="{{ uni.web_pages.0 }}" target="_blank">Site</a>
+    </li>
+  {% empty %}
+    <li>Nenhuma universidade encontrada.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
