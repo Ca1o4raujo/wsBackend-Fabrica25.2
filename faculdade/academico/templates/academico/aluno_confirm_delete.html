@@ -1,0 +1,10 @@
+{% extends "academico/base.html" %}
+{% block title %}Deletar Aluno{% endblock %}
+{% block content %}
+<h2>Você tem certeza que deseja deletar o aluno "{{ aluno.nome }}"?</h2>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Sim, deletar</button>
+  <a href="{% url 'alunos_list' %}">Cancelar</a>
+</form>
+{% endblock %}

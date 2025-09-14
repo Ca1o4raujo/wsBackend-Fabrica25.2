@@ -1,0 +1,31 @@
+{% extends "academico/base.html" %}
+
+{% block title %}Alunos{% endblock %}
+
+{% block content %}
+<h2>Alunos</h2>
+<a href="{% url 'aluno_create' %}">➕ Novo Aluno</a>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Curso</th>
+    <th>Ações</th>
+  </tr>
+  {% for aluno in alunos %}
+  <tr>
+    <td>{{ aluno.nome }}</td>
+    <td>{{ aluno.email }}</td>
+    <td>{{ aluno.curso.nome }}</td>
+    <td>
+      <a href="{% url 'aluno_update' aluno.id %}">Editar</a> |
+      <a href="{% url 'aluno_delete' aluno.id %}">Deletar</a>
+    </td>
+  </tr>
+  {% empty %}
+  <tr>
+    <td colspan="4">Nenhum aluno cadastrado.</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
