@@ -87,7 +87,7 @@ Alunos:
 
 Universidades (API Externa)
 
-/universidades → Buscar universidades por país
+/universidades → Buscar universidades 
 
 
 Django REST framework:
